@@ -1,0 +1,55 @@
+:root {
+  color-scheme: light dark;
+
+  /* Cores */
+
+  --cor-fundo: #ffffff;
+  --cor-superficie: #f4f4f5;
+  --cor-texto: #18181b;
+  --cor-texto-suave: #52525b;
+  --cor-marca: #6d3fc0;
+  --cor-marca-hover: #582fa3;
+  --cor-borda: #d4d4d8;
+  --cor-ok: #16743a;
+
+  /* Espaçamento */
+
+  --esp-1: 0.5rem;
+  --esp-2: 1rem;
+  --esp-3: 1.5rem;
+  --esp-4: 2rem;
+  --esp-5: 3rem;
+
+  /* Dimensões */
+
+  --raio: 12px;
+  --largura-conteudo: 72rem;
+
+  /* Tipografia */
+
+  --fonte-base:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  --tamanho-texto: 1rem;
+  --tamanho-pequeno: 0.875rem;
+  --tamanho-h1: clamp(2rem, 5vw, 3rem);
+  --tamanho-h2: clamp(1.5rem, 3vw, 2rem);
+  --tamanho-h3: 1.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-fundo: #0d0b14;
+    --cor-superficie: #18151f;
+    --cor-texto: #f3f0fa;
+    --cor-texto-suave: #c4bfd0;
+    --cor-marca: #c09aff;
+    --cor-marca-hover: #d0b5ff;
+    --cor-borda: #3d3848;
+    --cor-ok: #6ee79a;
+  }
+}

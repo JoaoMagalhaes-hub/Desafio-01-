@@ -1,0 +1,86 @@
+@layer reset, base, componentes, utilitarios;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 100%;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@layer base {
+  html {
+    font-family: var(--fonte-base);
+  }
+
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    min-height: 100dvh;
+
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+
+    font-size: var(--tamanho-texto);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: var(--tamanho-h1);
+  }
+
+  h2 {
+    font-size: var(--tamanho-h2);
+  }
+
+  h3 {
+    font-size: var(--tamanho-h3);
+  }
+
+  a {
+    color: var(--cor-marca);
+  }
+
+  a:hover {
+    color: var(--cor-marca-hover);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--cor-marca);
+    outline-offset: 2px;
+  }
+
+  main {
+    width: min(
+      calc(100% - 2 * var(--esp-2)),
+      var(--largura-conteudo)
+    );
+
+    margin-inline: auto;
+    padding-block: var(--esp-4);
+  }
+
+  section + section {
+    margin-block-start: var(--esp-5);
+  }
+}

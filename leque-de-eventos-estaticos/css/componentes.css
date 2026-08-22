@@ -1,0 +1,186 @@
+@layer componentes {
+  .skip-link {
+
+    position: absolute;
+
+    inset-block-start: var(--esp-1);
+    inset-inline-start: var(--esp-1);
+
+    transform: translateY(-200%);
+
+    padding: var(--esp-1) var(--esp-2);
+
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+
+    border: 2px solid var(--cor-marca);
+    border-radius: var(--raio);
+
+    text-decoration: none;
+
+    z-index: 100;
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+
+  /* Cabeçalho */
+
+  .cabecalho {
+    padding: var(--esp-3) var(--esp-2);
+
+    border-bottom: 1px solid var(--cor-borda);
+  }
+
+  .cabecalho__conteudo {
+    width: min(
+      calc(100% - 2 * var(--esp-2)),
+      var(--largura-conteudo)
+    );
+
+    margin-inline: auto;
+  }
+
+  .cabecalho nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp-2);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  /* Rodapé */
+
+  .rodape {
+    padding: var(--esp-3) var(--esp-2);
+
+    border-top: 1px solid var(--cor-borda);
+  }
+
+  /* Lista de eventos */
+
+  .lista-eventos {
+    display: grid;
+    gap: var(--esp-3);
+
+    grid-template-columns:
+      repeat(
+        auto-fit,
+        minmax(min(280px, 100%), 1fr)
+      );
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  /*
+   * Cada <li> é o container consultado
+   * pelo @container.
+   */
+
+  .lista-eventos > li {
+    container-type: inline-size;
+  }
+
+  /* Container estreito utilizado na home */
+
+  .lista-eventos-container {
+    width: min(100%, 32rem);
+  }
+
+  /* Card */
+
+  .card-evento {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    padding: var(--esp-3);
+
+    background: var(--cor-superficie);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+  }
+
+  .card-evento__categoria {
+    margin-block-start: 0;
+
+    color: var(--cor-texto-suave);
+
+    font-size: var(--tamanho-pequeno);
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .card-evento h3 {
+    margin-block: var(--esp-1);
+  }
+
+  .card-evento h3 a {
+    color: var(--cor-texto);
+  }
+
+  .card-evento time {
+    display: block;
+
+    margin-block-start: var(--esp-2);
+  }
+
+  /* Selo de evento gratuito */
+
+  .selo-gratuito {
+    display: inline-block;
+
+    margin-block-end: 0;
+    padding: var(--esp-1) var(--esp-2);
+
+    color: var(--cor-ok);
+
+    border: 1px solid var(--cor-ok);
+    border-radius: 999px;
+
+    font-weight: 700;
+  }
+
+  /*
+   * :has()
+   *
+   * Se o card contém um selo de evento gratuito,
+   * a borda do card recebe a cor de sucesso.
+   */
+
+  .card-evento:has(.selo-gratuito) {
+    border-color: var(--cor-ok);
+  }
+
+  /*
+   * Container Query
+   *
+   * Quando o <li> que contém o card tiver
+   * pelo menos 420px de largura, o card
+   * muda para um layout em Grid.
+   */
+
+  @container (min-width: 420px) {
+    .card-evento {
+      display: grid;
+
+      grid-template-columns: 120px 1fr;
+      gap: var(--esp-2);
+    }
+
+    .card-evento__categoria,
+    .card-evento h3 {
+      grid-column: 1 / -1;
+    }
+  }
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Leque de Eventos</title>
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#conteudo">
+    Pular para o conteúdo
+  </a>
+
+  <header class="cabecalho">
+    <div class="cabecalho__conteudo">
+
+      <h1>Leque de Eventos</h1>
+
+      <nav aria-label="Navegação principal">
+        <ul>
+          <li>
+            <a href="index.html">Início</a>
+          </li>
+
+          <li>
+            <a href="eventos.html">Eventos</a>
+          </li>
+
+          <li>
+            <a href="evento.html">Evento em destaque</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <section aria-labelledby="titulo-destaques">
+
+      <h2 id="titulo-destaques">
+        Próximos eventos
+      </h2>
+
+      <div class="lista-eventos-container">
+
+        <ul class="lista-eventos">
+
+          <li>
+            <article class="card-evento">
+
+              <p class="card-evento__categoria">
+                Tecnologia
+              </p>
+
+              <h3>
+                <a href="evento.html">
+                  React Recife · Meetup #42
+                </a>
+              </h3>
+
+              <p>
+                Uma noite sobre Signals, componentes modernos
+                e o futuro da reatividade no desenvolvimento web.
+              </p>
+
+              <p>
+                <strong>Organizador:</strong>
+                React Recife
+              </p>
+
+              <p>
+                <strong>Formato:</strong>
+                Presencial
+              </p>
+
+              <p>
+                <strong>Local:</strong>
+                Recife - PE
+              </p>
+
+              <time datetime="2026-09-12T19:00">
+                12 de setembro de 2026, às 19h
+              </time>
+
+              <p class="selo-gratuito">
+                Gratuito
+              </p>
+
+            </article>
+          </li>
+
+          <li>
+            <article class="card-evento">
+
+              <p class="card-evento__categoria">
+                Design
+              </p>
+
+              <h3>
+                <a href="evento.html">
+                  CSS Beyond the Box
+                </a>
+              </h3>
+
+              <p>
+                Encontro dedicado a CSS moderno, Container Queries,
+                Cascade Layers e novas possibilidades de layout.
+              </p>
+
+              <p>
+                <strong>Organizador:</strong>
+                Frontend Brasil
+              </p>
+
+              <p>
+                <strong>Formato:</strong>
+                Online
+              </p>
+
+              <p>
+                <strong>Local:</strong>
+                Transmissão online
+              </p>
+
+              <time datetime="2026-09-18T20:00">
+                18 de setembro de 2026, às 20h
+              </time>
+
+              <p class="selo-gratuito">
+                Gratuito
+              </p>
+
+            </article>
+          </li>
+
+          <li>
+            <article class="card-evento">
+
+              <p class="card-evento__categoria">
+                Tecnologia
+              </p>
+
+              <h3>
+                <a href="evento.html">
+                  Java & Spring Boot Conference
+                </a>
+              </h3>
+
+              <p>
+                Conferência sobre arquitetura de aplicações Java,
+                Spring Boot, microsserviços e observabilidade.
+              </p>
+
+              <p>
+                <strong>Organizador:</strong>
+                Dev Nordeste
+              </p>
+
+              <p>
+                <strong>Formato:</strong>
+                Híbrido
+              </p>
+
+              <p>
+                <strong>Local:</strong>
+                João Pessoa - PB
+              </p>
+
+              <time datetime="2026-10-03T09:00">
+                3 de outubro de 2026, às 9h
+              </time>
+
+              <p>
+                R$ 89,90
+              </p>
+
+            </article>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+    <section aria-labelledby="titulo-sobre">
+
+      <h2 id="titulo-sobre">
+        Sobre o catálogo
+      </h2>
+
+      <p>
+        O Leque de Eventos reúne encontros, conferências,
+        workshops e atividades de diferentes áreas em um único
+        catálogo.
+      </p>
+
+      <p>
+        Consulte a listagem completa para encontrar eventos
+        presenciais, online e híbridos.
+      </p>
+
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>
+      &copy; 2026 Leque de Eventos
+    </p>
+  </footer>
+
+</body>
+</html>
